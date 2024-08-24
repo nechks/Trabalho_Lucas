@@ -14,6 +14,8 @@ public class SortingExample {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            
         System.out.print("Digite a quantidade de números a serem ordenados: ");
         int n = scanner.nextInt();
 
@@ -34,7 +36,7 @@ public class SortingExample {
         }
 
         System.out.print(
-                "Escolha o algoritmo: ordenação crescente->(1: BubbleSort, 2: InsertionSort, 3: SelectionSort, 4: MergeSort, 5: QuickSort, 6: HeapSort), ordenação descrecente->(7: BubbleSort, 8: InsertionSort, 9: SelectionSort, 10: MergeSort, 11: QuickSort, 12: HeapSort), ordenação aleatória->(13: BubbleSort, 14: InsertionSort, 15: SelectionSort, 16: MergeSort, 17: QuickSort, 18: HeapSort): ");
+                "Escolha o algoritmo: ordenação crescente->(1: BubbleSort, 2: InsertionSort, 3: SelectionSort, 4: MergeSort, 5: QuickSort, 6: HeapSort), ordenação descrecente->(7: BubbleSort, 8: InsertionSort, 9: SelectionSort, 10: MergeSort, 11: QuickSort, 12: HeapSort), ordenação aleatória->(13: BubbleSort, 14: InsertionSort, 15: SelectionSort, 16: MergeSort, 17: QuickSort, 18: HeapSort, 19: encerrar aplicacao): ");
         int choice = scanner.nextInt();
 
         double tempoInicial = System.currentTimeMillis();
@@ -99,6 +101,9 @@ public class SortingExample {
             case 18:
                 ordenacaoAleatoria.heapShuffle(numbers);
                 break;
+            case 19:
+                System.out.println("Aplicacao encerrada");
+                break;
 
             default:
                 System.out.println("Algoritmo de ordenação inválido.");
@@ -106,7 +111,7 @@ public class SortingExample {
 
         double tempoFinal = System.currentTimeMillis();
         double tempoExecucao = tempoFinal - tempoInicial;
-        System.out.println("Tempo de execução em milissegundos: " + tempoExecucao);
+        System.out.println("Tempo de execução em segundos: " + tempoExecucao / 1000);
 
         // Gravar os números ordenados no arquivo de saída
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFileName))) {
@@ -119,7 +124,13 @@ public class SortingExample {
         }
 
         System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
-
+        
+        if (choice == 19) {
+            break;
+        }
+        
+        
+    }
         scanner.close();
     }
 }
