@@ -1,7 +1,4 @@
 BubbleSort Crescente      100000               14397,0000
 BubbleSort Crescente      120000               20579,0000
 BubbleSort Crescente      220000               69505,0000
-BubbleSort Crescente      280000               8059,0000
 BubbleSort Crescente      280000               109876,0000
-BubbleSort Crescente      340000               157900,0000
-BubbleSort Crescente      340000               162967,0000
