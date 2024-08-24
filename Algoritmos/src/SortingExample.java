@@ -16,6 +16,16 @@ public class SortingExample {
 
         while (true) {
             
+        System.out.println("");
+
+        System.out.print(
+                "Escolha o algoritmo: ordenação crescente->(1: BubbleSort, 2: InsertionSort, 3: SelectionSort, 4: MergeSort, 5: QuickSort, 6: HeapSort), ordenação descrecente->(7: BubbleSort, 8: InsertionSort, 9: SelectionSort, 10: MergeSort, 11: QuickSort, 12: HeapSort), ordenação aleatória->(13: BubbleSort, 14: InsertionSort, 15: SelectionSort, 16: MergeSort, 17: QuickSort, 18: HeapSort, 19: encerrar aplicacao): ");
+        int choice = scanner.nextInt();
+
+        if (choice == 19) {
+            break;
+        }    
+
         System.out.print("Digite a quantidade de números a serem ordenados: ");
         int n = scanner.nextInt();
 
@@ -34,10 +44,6 @@ public class SortingExample {
         } catch (IOException e) {
             System.out.println("Erro ao ler o arquivo de entrada: " + e.getMessage());
         }
-
-        System.out.print(
-                "Escolha o algoritmo: ordenação crescente->(1: BubbleSort, 2: InsertionSort, 3: SelectionSort, 4: MergeSort, 5: QuickSort, 6: HeapSort), ordenação descrecente->(7: BubbleSort, 8: InsertionSort, 9: SelectionSort, 10: MergeSort, 11: QuickSort, 12: HeapSort), ordenação aleatória->(13: BubbleSort, 14: InsertionSort, 15: SelectionSort, 16: MergeSort, 17: QuickSort, 18: HeapSort, 19: encerrar aplicacao): ");
-        int choice = scanner.nextInt();
 
         double tempoInicial = System.currentTimeMillis();
 
@@ -125,9 +131,6 @@ public class SortingExample {
 
         System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
         
-        if (choice == 19) {
-            break;
-        }
         
         
     }
