@@ -169,7 +169,7 @@ public class SortingExample {
             System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
 
             // Exportar resultados para um arquivo .txt
-            exportarResultados(algorithm, n, tempoExecucao, "resultadosMergeSortCrescente.txt");
+            exportarResultados(algorithm, n, tempoExecucao, "resultadosHeapSortCrescente.txt");
 
         }
         scanner.close();
