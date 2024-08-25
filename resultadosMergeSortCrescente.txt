@@ -1,1 +1,0 @@
-MergeSort Crescente       100000               0,0190
