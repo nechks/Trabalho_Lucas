@@ -18,11 +18,31 @@ public class SortingExample {
             System.out.print("Digite a quantidade de números a serem ordenados: ");
             int n = scanner.nextInt();
 
-            String inputFileName = "numeros-com-repeticao.txt"; // Arquivo de entrada
-            String outputFileName = "saida.txt"; // Arquivo de saída
-    
-            System.out.println("Arquivo de entrada definido como: " + inputFileName);
-            System.out.println("Arquivo de saída definido como: " + outputFileName);
+                    // Menu para selecionar o arquivo de entrada
+                    System.out.println("Selecione o arquivo de entrada:");
+                    System.out.println("1 - numeros-com-repeticao.txt");
+                    System.out.println("2 - numeros-sem-repeticao.txt");
+            
+                    int filechoice = scanner.nextInt();
+                    String inputFileName = "";
+            
+                    // Escolhe o arquivo de entrada com base na escolha do usuário
+                    switch (filechoice) {
+                        case 1:
+                            inputFileName = "numeros-com-repeticao.txt";
+                            break;
+                        case 2:
+                            inputFileName = "numeros-sem-repeticao.txt";
+                            break;
+                        default:
+                            System.out.println("Opção inválida. O programa será encerrado.");
+                            return; // Encerra o programa caso a escolha seja inválida
+                    }
+            
+                    String outputFileName = "saida.txt"; // Arquivo de saída
+            
+                    System.out.println("Arquivo de entrada selecionado: " + inputFileName);
+                    System.out.println("Arquivo de saída definido como: " + outputFileName);
     
             // Ler os números do arquivo de entrada
             int[] numbers = new int[n];
@@ -149,7 +169,7 @@ public class SortingExample {
             System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
 
             // Exportar resultados para um arquivo .txt
-            exportarResultados(algorithm, n, tempoExecucao, "resultadosSelectionSort.txt");
+            exportarResultados(algorithm, n, tempoExecucao, "resultadosMergeSortCrescente.txt");
 
         }
         scanner.close();
