@@ -10,6 +10,7 @@ public class SortingExample {
     static OrdenacaoCrescente ordenacaoCrescente = new OrdenacaoCrescente();
     static OrdenacaoDecrescente ordenacaoDecrescente = new OrdenacaoDecrescente();
     static OrdenacaoAleatoria ordenacaoAleatoria = new OrdenacaoAleatoria();
+    private static String direction;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -169,7 +170,7 @@ public class SortingExample {
             System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
 
             // Exportar resultados para um arquivo .txt
-            exportarResultados(algorithm, n, tempoExecucao, "resultadosBlubleSortDecrescente.txt");
+            exportarResultados(algorithm, n, tempoExecucao, "resultadosBlubleSortCrescente.txt");
 
         }
         scanner.close();
