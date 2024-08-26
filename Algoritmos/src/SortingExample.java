@@ -19,7 +19,7 @@ public class SortingExample {
             System.out.println("");
 
             System.out.print(
-                    "Escolha o algoritmo: ordenação crescente->(1: BubbleSort, 2: InsertionSort, 3: SelectionSort, 4: MergeSort, 5: QuickSort, 6: HeapSort), ordenação descrecente->(7: BubbleSort, 8: InsertionSort, 9: SelectionSort, 10: MergeSort, 11: QuickSort, 12: HeapSort), ordenação aleatória->(13: BubbleSort, 14: InsertionSort, 15: SelectionSort, 16: MergeSort, 17: QuickSort, 18: HeapSort, 19: encerrar aplicacao): ");
+                    "Escolha o algoritmo: ordenação crescente->(1: BubbleSortC, 2: InsertionSortC, 3: SelectionSortC, 4: MergeSortC, 5: QuickSortC, 6: HeapSortC), ordenação descrecente->(7: BubbleSortD, 8: InsertionSortD, 9: SelectionSortD, 10: MergeSortD, 12: HeapSortD),-> ordenacao aleatorio(14: InsertionSortA, 15: SelectionSortA, 16: MergeSortA, 17: QuickSortA, 18: HeapSortA, 19: encerrar aplicacao): ");
             int choice = scanner.nextInt();
 
             if (choice == 19) {
@@ -172,7 +172,64 @@ public class SortingExample {
             }
 
             System.out.println("Ordenação concluída e salva no arquivo: " + outputFileName);
-            exportarResultados(algorithm, n, tempoExecucao, "resultados.txt");
+
+            switch (choice) {
+                case 1:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosBublleSortCrescente.txt");
+                    break;
+                case 2:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosInsertionSortCrescente.txt");
+                    break;
+                case 3:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosSelectionCrescente.txt");
+                    break;
+                case 4:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosMergeSortCrescente.txt");
+                    break;
+                case 5:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosQuickSortCrescente.txt");
+                    break;
+                case 6:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosHeapSortCrescente.txt");
+                    break;
+                case 7:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosBublleSortDecrescente.txt");
+                    break;
+                case 8:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosInsertionSortDecrescente.txt");
+                    break;
+                case 9:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosSelectionSortDecrescente.txt");
+                    break;
+                case 10:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosMergeSortDecrescente.txt");
+                    break;
+                case 11:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosQuickSortDecrescente.txt");
+                    break;
+                case 12:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosHeapSortDescrescente.txt");
+                    case 13:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosBublleSortAleatorio.txt");
+                    break;
+                case 14:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosInsertionSortAleatorio.txt");
+                    break;
+                case 15:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosSelectionAleatorio.txt");
+                    break;
+                case 16:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosMergeSortAleatorio.txt");
+                    break;
+                case 17:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosQuickSortAleatorio.txt");
+                    break;
+                case 18:
+                    exportarResultados(algorithm, n, tempoExecucao, "resultadosHeapAleatorio.txt");
+                    default:
+
+                    break;
+            }
 
         }
         scanner.close();
