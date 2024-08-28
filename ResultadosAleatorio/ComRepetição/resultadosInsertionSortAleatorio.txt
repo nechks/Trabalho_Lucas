@@ -1,0 +1,1 @@
+InsertionShuffle Aleatório 100000               16,0000
