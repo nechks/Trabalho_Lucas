@@ -17,9 +17,16 @@ public class SortingExample {
         while (true) {
 
             System.out.println("");
-
-            System.out.print(
-                    "Escolha o algoritmo: ordenação crescente->(1: BubbleSortC, 2: InsertionSortC, 3: SelectionSortC, 4: MergeSortC, 5: QuickSortC, 6: HeapSortC), ordenação descrecente->(7: BubbleSortD, 8: InsertionSortD, 9: SelectionSortD, 10: MergeSortD, 12: HeapSortD),-> ordenacao aleatorio(14: InsertionSortA, 15: SelectionSortA, 16: MergeSortA, 17: QuickSortA, 18: HeapSortA, 19: encerrar aplicacao): ");
+                System.out.print(
+                    "Escolha o algoritmo:\n" +
+                    "(1: BubbleSortC, \n" +
+                    "2: InsertionSortC, \n" +
+                    "3: SelectionSortC, \n" +
+                    "4: MergeSortC, \n" +
+                    "5: QuickSortC, \n" +
+                    "6: HeapSortC),"
+                );
+                
             int choice = scanner.nextInt();
 
             if (choice == 19) {
@@ -29,13 +36,7 @@ public class SortingExample {
             System.out.print("Digite a quantidade de números a serem ordenados: ");
             int n = scanner.nextInt();
 
-            /*
-             * System.out.print("Digite o nome do arquivo de entrada: ");
-             * String inputFileName = scanner.next();
-             * 
-             * System.out.print("Digite o nome do arquivo de saída: ");
-             * String outputFileName = scanner.next();
-             */
+         
             System.out.println("Selecione o arquivo de entrada:");
             System.out.println("1 - numeros-com-repeticao.txt");
             System.out.println("2 - numeros-sem-repeticao.txt");
